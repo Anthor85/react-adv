@@ -14,16 +14,11 @@ export const useProduct = ({
 }: useProductProps) => {
   const [counter, setCounter] = useState(initialValue);
 
-  const isControlled = useRef(!!onChange);
-
   useEffect(() => {
     setCounter(initialValue);
   }, [initialValue]);
 
   const increaseBy = (value: number) => {
-    if (isControlled.current) {
-      return onChange!({ product, count: value });
-    }
     const newValue = Math.max(0, counter + value);
     setCounter(newValue);
 

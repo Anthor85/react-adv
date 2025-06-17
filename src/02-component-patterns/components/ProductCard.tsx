@@ -47,6 +47,3 @@ export const ProductCard = ({
   );
 };
 
-// ProductCard.Image = ProductImage;
-// ProductCard.Title = ProductTitle;
-// ProductCard.Buttons = ProductButtons;
